@@ -1,53 +1,313 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main/css/style.css">
-    
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>FELIZ CUMPLEA ALYSHH</title>
+    <title>Legendary Bachelor Party Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .title-font {
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.36);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .countdown-item {
+            min-width: 70px;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            border-radius: 50%;
+            animation: fall 5s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .button-glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        .groom-image {
+            box-shadow: 0 0 15px rgba(165, 180, 252, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .groom-image:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px -5px #6366f1;
+            }
+            to {
+                box-shadow: 0 0 10px 5px #6366f1;
+            }
+        }
+    </style>
 </head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="card p-8 max-w-3xl w-full relative overflow-hidden">
+        <!-- Confetti background -->
+        <div id="confetti-container"></div>
+        
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="flex justify-center mb-4">
+                <i class="fas fa-crown text-yellow-400 text-5xl"></i>
+            </div>
+            <h1 class="title-font text-5xl md:text-6xl text-purple-300 mb-2">LEGENDARY BASH</h1>
+            <p class="text-xl text-gray-300">You're invited to celebrate</p>
+            <div class="mt-2 text-3xl font-bold text-indigo-300">Ei lUí'S</div>
+            <div class="text-5xl title-font text-pink-400">LAST RIDE OF FREEDOM</div>
+        </div>
+        
+        <!-- Groom's Photo -->
+        <div class="flex justify-center mb-8">
+            <div class="w-48 h-48 rounded-full border-4 border-indigo-500 overflow-hidden shadow-lg">
+                <img src="luis.jpg" alt="Groom" class="w-full h-full object-cover">
+            </div>
+        </div>
+        
+        <!-- Details -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar-day text-indigo-400 mr-3 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold">DATE</h3>
+                        <p class="text-gray-300">Saturday, JUNE 13th, 2025</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-indigo-400 mr-3 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold">TIME</h3>
+                        <p class="text-gray-300">8:00 PM till dawn</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-indigo-400 mr-3 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold">LOCATION</h3>
+                        <p class="text-gray-300">ALBAS BREWING</p>
+                        <p class="text-gray-400 text-sm">LOS JARDINES (Decuida yo te busco)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <i class="fas fa-tshirt text-indigo-400 mr-3 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold">DRESS CODE</h3>
+                        <p class="text-gray-300">No Ties Allowed</p>
+                        <p class="text-gray-400 text-sm">Classy casual with wild shoes</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <i class="fas fa-cocktail text-indigo-400 mr-3 text-xl"></i>
+                    <div>
+                        <h3 class="font-bold">WHAT TO EXPECT</h3>
+                        <p class="text-gray-300">Drinks, Food & Secrets but in chill mode becasuse he only have one good leg.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <!-- Memorable Quote -->
+        <div class="bg-indigo-900 bg-opacity-30 border-l-4 border-pink-500 p-4 mb-8 italic">
+            <p class="text-center">"This isn't a party, it's a legendary send-off into married life! Before María stops him from going out to parties."</p>
+        </div>
+        
+        <!-- Countdown -->
+        <div class="mb-8">
+            <h3 class="text-center text-xl font-bold mb-4">COUNTDOWN TO THE BIG NIGHT</h3>
+            <div class="flex justify-center space-x-4 text-center">
+                <div class="countdown-item bg-indigo-900 bg-opacity-30 p-3 rounded-lg">
+                    <div class="text-2xl font-bold" id="days">00</div>
+                    <div class="text-xs uppercase">Days</div>
+                </div>
+                <div class="countdown-item bg-indigo-900 bg-opacity-30 p-3 rounded-lg">
+                    <div class="text-2xl font-bold" id="hours">00</div>
+                    <div class="text-xs uppercase">Hours</div>
+                </div>
+                <div class="countdown-item bg-indigo-900 bg-opacity-30 p-3 rounded-lg">
+                    <div class="text-2xl font-bold" id="minutes">00</div>
+                    <div class="text-xs uppercase">Minutes</div>
+                </div>
+                <div class="countdown-item bg-indigo-900 bg-opacity-30 p-3 rounded-lg">
+                    <div class="text-2xl font-bold" id="seconds">00</div>
+                    <div class="text-xs uppercase">Seconds</div>
+                </div>
+            </div>
+        </div>
+        
+        <audio autoplay loop>
+            <source src="cancion.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML.
+        </audio>
 
-<body>
-    <div class="greetings">
-        <span>F</span>
-        <span>E</span>
-        <span>L</span>
-        <span>I</span>
-        <span>Z</span>
-        <br>
-        <span>C</span>
-        <span>U</span>
-        <span>M</span>
-        <span>P</span>
-        <span>L</span>
-        <span>E</span>
+
+
+
+        <!-- RSVP Button -->
+        <div class="text-center">
+            <button id="rsvpBtn" class="button-glow bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                CLICKEA PA LA CHELCHA😈😈<i class="fas fa-paper-plane ml-2"></i>
+            </button>
+        </div>
+        
+        <!-- Disclaimer -->
+        <p class="text-center text-xs text-gray-500 mt-6">
+            What happens at the bachelor party stays at the bachelor party. No exceptions.
+            ¿Por que está en ingles? Pos porque me dió mi FUCKING GANA! BYE
+        </p>
+    </div>
+
+    <script>
+        // Countdown functionality
+        function updateCountdown() {
+            const partyDate = new Date("June 13, 2025 20:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = partyDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Confetti effect
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            const container = document.getElementById('confetti-container');
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.width = (Math.random() * 8 + 5) + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.animationDelay = (Math.random() * 5) + 's';
+                container.appendChild(confetti);
+            }
+        }
+        
+        // Button interaction
+      document.getElementById('rsvpBtn').addEventListener('click', function() {
+    createConfetti();
+
+    // Lista de URLs posibles
+    const urls = [
         
 
-        
-    </div>
-    <div class="description">
-        <span>TE QUIERO UN PAQUETON           💖😊</span>
-    </div>
-    <div class="button">
-        <button class="botones">
-            <a href="main/flower.html" style="color: #fff;">REGALO #1 😇</a>
-        </button>
-    </div>
-    <div class="button">
-        <button class="botones">
-            <a href="main/gift/dist/gift.html" style="color: #fff;">REGALO #2 😈</a>
-        </button>
-    </div>
 
-    <!-- Créditos -->
-    <div class="credits">
-        <p>&copy; EN VACANERIA EI BOCHI</p>
+       'https://vt.tiktok.com/ZSk5QvbET/',
+
+'https://vt.tiktok.com/ZSk5Q4L2j/',
+
+'https://vt.tiktok.com/ZSk5QW9S3/',
+
+'https://vt.tiktok.com/ZSk5QuN74/',
+'https://vt.tiktok.com/ZSk5CY5Ys/',
+
+'https://vt.tiktok.com/ZSk5CFXQr/',
+
+'https://vt.tiktok.com/ZSk5C63je/',
+
+'https://vt.tiktok.com/ZSk5CDEpm/',
+
+'https://vt.tiktok.com/ZSk5QECsQ/',
+
+'https://vt.tiktok.com/ZSk5Cheyq/',
+
+'https://vt.tiktok.com/ZSk5QEujA/',
+
+'https://vt.tiktok.com/ZSk5QEgaS/',
+
+'https://vt.tiktok.com/ZSk5QoSUA/',
+
+'https://vt.tiktok.com/ZSk5CeFUK/',
+
+'https://vt.tiktok.com/ZSk5CdrVu/',
+
+'https://vt.tiktok.com/ZSk5ChYqS/',
+
+'https://vt.tiktok.com/ZSk5CFptT/',
+
+'https://vt.tiktok.com/ZSk5CCbfa/',
+
+'https://vt.tiktok.com/ZSk5CVMGY/',
+
+'https://vt.tiktok.com/ZSk5CHUqB/',
+
+'https://vt.tiktok.com/ZSk5Cbcvd/',
+
+'https://vt.tiktok.com/ZSk5CvP7d/',
+
+'https://vt.tiktok.com/ZSk5CqwMP/',
+'https://vt.tiktok.com/ZSk5CXr9f/'
+   
+
+
+];
+
+    
+
+    // Selecciona una URL al azar
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+
+    // Abre la URL seleccionada
+    window.open(randomUrl, '_blank');
+})
         
-    </div>
+        // Initial confetti
+        createConfetti();
+    </script>
 </body>
-
 </html>
